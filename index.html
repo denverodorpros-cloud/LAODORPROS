@@ -195,7 +195,7 @@ footer-brand{font-family:'Playfair Display',serif;font-size:18px;font-weight:700
 </style>
 </head>
 <body>
-<nav id="navbar"><div class="container"><div class="nav-inner"><a href="#hero" class="nav-logo"><span class="nav-logo-name">LA Odor Pros</span><span class="nav-logo-sub">Professional Ozone Removal</span></a><div class="nav-links" id="nav-links"><a href="#services">Services</a><a href="#why-ozone">How It Works</a><a href="#real-estate">Real Estate</a><a href="#testimonials">Reviews</a><a href="#area-grid">Service Area</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div class="nav-right"><a href="tel:+17207577695" class="nav-phone"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+<nav id="navbar" style="position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:9999!important;width:100%!important;transform:none!important;"><div class="container"><div class="nav-inner"><a href="#hero" class="nav-logo"><span class="nav-logo-name">LA Odor Pros</span><span class="nav-logo-sub">Professional Ozone Removal</span></a><div class="nav-links" id="nav-links"><a href="#services">Services</a><a href="#why-ozone">How It Works</a><a href="#real-estate">Real Estate</a><a href="#testimonials">Reviews</a><a href="#area-grid">Service Area</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div class="nav-right"><a href="tel:+17207577695" class="nav-phone"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
           (720) 757-7695
         </a><a href="#contact" class="btn-gold btn-sm">Free Estimate</a><button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div></div></div>
 </nav>
@@ -243,6 +243,26 @@ footer-brand{font-family:'Playfair Display',serif;font-size:18px;font-weight:700
             Mon–Fri: 7am – 8pm<br>24 Hours: 8am – 6pm<br>Open: 9am – 5pm
           </div></div></div></div></div><div class="footer-bottom"><div class="container"><div class="footer-bottom-inner"><p>© 2026 LA Odor Pros. All rights reserved.</p><p style="font-style:italic">Professional ozone odor removal — Los Angeles, CA</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></div>
 </footer><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+// Force navbar fixed
+(function(){
+  var nav = document.getElementById('navbar');
+  if(nav){
+    nav.style.setProperty('position','fixed','important');
+    nav.style.setProperty('top','0','important');
+    nav.style.setProperty('left','0','important');
+    nav.style.setProperty('right','0','important');
+    nav.style.setProperty('z-index','9999','important');
+    nav.style.setProperty('width','100%','important');
+    nav.style.setProperty('transform','none','important');
+    window.addEventListener('scroll', function(){
+      nav.style.setProperty('position','fixed','important');
+      nav.style.setProperty('top','0','important');
+      nav.style.setProperty('transform','none','important');
+    }, {passive:true});
+  }
+})();
+
 // ===== DATA =====
 const trustBadges=[
   {icon:'✓',title:'Certified Professionals',desc:'Trained ozone remediation specialists'},
